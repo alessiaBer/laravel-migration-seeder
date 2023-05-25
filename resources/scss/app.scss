@@ -1,5 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
+span.delay {
+    border: 1px solid $dark;
+    font-size: 0.7rem;
+    border-radius: 6px;
+}
 .dep_fail {
     text-decoration: line-through;
     span {

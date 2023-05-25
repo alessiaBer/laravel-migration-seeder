@@ -18,7 +18,12 @@
             <tr>
                 @if($train->cancelled === 0) 
                 <th scope="row">{{$train->train_code}}</th>
-                <td>{{date('H:i', strtotime($train->departure_time))}}</td>
+                <td>
+                    {{date('H:i', strtotime($train->departure_time))}}
+                    @if($train->on_time === 0)
+                    <span class="d-inline-block bg-warning px-1 delay ms-2">Delay</span>
+                    @endif
+                </td>
                 <td>{{$train->arrival_station}}</td>
                 <td>{{date('H:i', strtotime($train->arrival_time))}}</td>
                 <td>{{$train->company}}</td>
