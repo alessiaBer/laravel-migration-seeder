@@ -1,1 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+
+.dep_fail {
+    text-decoration: line-through;
+    span {
+        text-decoration: none;
+        color: white;
+    }
+}
+
