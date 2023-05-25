@@ -16,7 +16,7 @@
             @foreach($trains as $train)
             <tr>
                 <th scope="row">{{$train->train_code}}</th>
-                <td>{{$train->departure_time}}</td>
+                <td>{{date('H:i', strtotime($train->departure_time))}}</td>
                 <td>{{$train->company}}</td>
                 <td>{{$train->arrival_station}}</td>
             </tr>
